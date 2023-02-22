@@ -1,0 +1,11 @@
+<%= form_with(model: task, url: url, local: true) do |form| %>
+  <% if new_record %>
+    <!-- don't display "Completed" for new tasks -->
+  <% else %>
+    <%= form.check_box :completed %>
+  <% end %>
+
+  <!-- form fields for title and details -->
+
+  <%= form.submit %>
+<% end %>
